@@ -131,6 +131,7 @@ export const QuestionWizard: React.FC<IQuestionWizardProps> = ({
               <QuestionTitle>{currentQuestion.title}</QuestionTitle>
             </Header>
             <Body>
+              {currentQuestion.description && currentQuestion.description}
               <ChildrenContainer>{children}</ChildrenContainer>
               {onRenderOptions()}
             </Body>

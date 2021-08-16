@@ -26,6 +26,7 @@ export const Default = Template.bind({});
 const questionWizardQuestions: IQuestion[] = [
   {
     title: "What's your goal?",
+    description: <p>Forever learning</p>,
     options: [
       {
         id: '1',
@@ -49,6 +50,7 @@ const questionWizardQuestions: IQuestion[] = [
   },
   {
     title: "What's the meaning of life?",
+    description: <p>Code as much as you can!</p>,
     options: [
       {
         id: '4',

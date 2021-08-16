@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IQuestionOption {
   id: string;
   imageUrl: string;
@@ -7,6 +9,7 @@ export interface IQuestionOption {
 
 export interface IQuestion {
   title: string;
+  description?: React.ReactNode;
   options: IQuestionOption[];
 }
 

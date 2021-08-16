@@ -46,8 +46,8 @@ const IconBox = styled(motion.div)`
 
   /*DESKTOP ONLY CODE*/
   @media screen and (min-width: 700px) {
-    width: 166px;
-    height: 212px;
+    width: 145px;
+    height: 160px;
     justify-content: center;
     align-items: center;
   }
