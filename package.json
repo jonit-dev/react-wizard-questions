@@ -76,5 +76,6 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "repository": "git://github.com/jonit-dev/react-wizard-questions.git"
 }
