@@ -16,6 +16,7 @@ export interface IQuestionWizardProps {
   className?: string;
   themeProps?: IWizardTheme;
   options?: IWizardOptions;
+  children?: React.ReactNode;
 }
 
 export const QuestionWizard: React.FC<IQuestionWizardProps> = ({
@@ -25,6 +26,7 @@ export const QuestionWizard: React.FC<IQuestionWizardProps> = ({
   className,
   themeProps,
   options,
+  children,
 }) => {
   const [questionsIndex, setQuestionsIndex] = useState<number>(0);
   const [totalQuestions] = useState<number>(questions.length);
@@ -128,7 +130,10 @@ export const QuestionWizard: React.FC<IQuestionWizardProps> = ({
               </QuestionLabel>
               <QuestionTitle>{currentQuestion.title}</QuestionTitle>
             </Header>
-            <Body>{onRenderOptions()}</Body>
+            <Body>
+              <ChildrenContainer>{children}</ChildrenContainer>
+              {onRenderOptions()}
+            </Body>
             <Footer>
               <PreviousButton
                 onClick={onPreviousClick}
@@ -163,6 +168,10 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2rem;
+`;
+
+const ChildrenContainer = styled.div`
+  flex: 100%;
 `;
 
 const Container = styled(motion.div)`

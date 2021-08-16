@@ -74,4 +74,5 @@ Custom.args = {
     titleColor: 'red',
     questionOptionColor: 'red',
   },
+  children: <p>This is a custom text here</p>,
 };
