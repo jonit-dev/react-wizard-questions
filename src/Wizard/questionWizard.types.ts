@@ -1,4 +1,5 @@
 export interface IQuestionOption {
+  id: string;
   imageUrl: string;
   label: string;
   isSelected: boolean;

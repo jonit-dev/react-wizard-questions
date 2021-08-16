@@ -21,7 +21,7 @@ export const QuestionOptionCard: React.FC<IProps> = ({
 }) => {
   return (
     <IconBox
-      className={!isSelected ? 'inactive' : ''}
+      className={!isSelected ? 'inactive' : 'active'}
       onClick={onClick}
       animate={isSelected ? { scale: 1.05 } : { scale: 1 }}
       transition={{ duration: 0.5 }}
