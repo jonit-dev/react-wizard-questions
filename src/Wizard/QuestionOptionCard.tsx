@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { CheckCircle } from "react-feather";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 import { defaultWizardThemeProps } from "./constants/questionWizard.constants";
 
@@ -77,7 +77,10 @@ const ImageContainer = styled.div`
 
 const IconBoxLabel = styled.span`
   font-size: 0.8rem;
-  color: ${({ theme }) => (theme ? theme.gray : defaultWizardThemeProps.gray)};
+  color: ${({ theme }) =>
+    theme
+      ? theme.questionOptionColor
+      : defaultWizardThemeProps.questionOptionColor};
   font-weight: bold;
   display: flex;
   justify-content: center;

@@ -72,5 +72,6 @@ Custom.args = {
     ...defaultWizardThemeProps,
     primary: 'green',
     titleColor: 'red',
+    questionOptionColor: 'red',
   },
 };

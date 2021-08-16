@@ -12,7 +12,7 @@ export interface IQuestion {
 export interface IQuestionButton {
   onClick: () => void;
   isDisabled?: boolean;
-  type: "next" | "previous" | "finish";
+  type: 'next' | 'previous' | 'finish';
   children?: React.ReactNode;
   color?: string;
 }
@@ -25,6 +25,7 @@ export interface IWizardTheme {
   gray: string;
   mediumGray: string;
   titleColor: string;
+  questionOptionColor: string;
 }
 
 export interface IWizardOptions {
