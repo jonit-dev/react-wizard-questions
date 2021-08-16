@@ -42,9 +42,6 @@ export const QuestionWizard: React.FC<IQuestionWizardProps> = ({
   const [isCurrentStepDisabled, setCurrentStepDisabled] = useState(
     !questions[questionsIndex].options.some((option) => option.isSelected)
   );
-  const [isOneStepBeforeFinishing, setIsOneStepBeforeFinishing] = useState(
-    questionsIndex === totalQuestions - 2
-  );
 
   useEffect(() => {
     onChange && onChange(questions);
@@ -58,7 +55,6 @@ export const QuestionWizard: React.FC<IQuestionWizardProps> = ({
     setCurrentStepDisabled(
       !questions[questionsIndex].options.some((option) => option.isSelected)
     );
-    setIsOneStepBeforeFinishing(questionsIndex === totalQuestions - 2);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [questionsIndex, currentQuestion]);
 
@@ -141,7 +137,7 @@ export const QuestionWizard: React.FC<IQuestionWizardProps> = ({
                 isDisabled={isPreviousDisabled}
               />
 
-              {isOneStepBeforeFinishing && (
+              {!isLastStep && (
                 <NextButton
                   onClick={onNextClick}
                   isDisabled={isCurrentStepDisabled}

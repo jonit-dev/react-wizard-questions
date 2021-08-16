@@ -60,6 +60,18 @@ const questionWizardQuestions: IQuestion[] = [
       },
     ],
   },
+  {
+    title: "What's the meaning of life?",
+    description: <p>Code as much as you can!</p>,
+    options: [
+      {
+        id: '4',
+        imageUrl: '/images/online-learning.png',
+        label: 'Eat & Code',
+        isSelected: false,
+      },
+    ],
+  },
 ];
 
 Default.args = {
