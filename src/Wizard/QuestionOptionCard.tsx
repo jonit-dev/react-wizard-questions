@@ -69,9 +69,10 @@ const ImageContainer = styled.div`
   align-items: center;
 
   img {
-    width: 82px;
-    height: 82px;
+    width: 62px;
+    height: 62px;
     margin: 0.25rem;
+    padding: 0.5rem;
   }
 `;
 
